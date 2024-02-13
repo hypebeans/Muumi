@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct MuumiApp: App {
+    
+    let migrator = Migrator() // Running the migration
+    
     var body: some Scene {
         WindowGroup {
             let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable") // Constraint error handling

@@ -29,6 +29,7 @@ struct AddShoppingListScreen: View {
                     shoppingList.title = title
                     shoppingList.address = address
                     $shoppingLists.append(shoppingList)
+                    
                     dismiss()
                 } label: {
                     Text("Save")

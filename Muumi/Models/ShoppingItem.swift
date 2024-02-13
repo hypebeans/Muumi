@@ -13,6 +13,7 @@ class ShoppingItem: Object, Identifiable {
     @Persisted var title: String
     @Persisted var quantity: Int
     @Persisted var price: Int
+    @Persisted var category: String
     
     override class func primaryKey() -> String? {
         return "id"

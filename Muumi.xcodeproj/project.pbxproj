@@ -16,6 +16,9 @@
 		6B942FB22B7B2F470053A91B /* AddShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FB12B7B2F470053A91B /* AddShoppingListScreen.swift */; };
 		6B942FB52B7B304C0053A91B /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FB42B7B304C0053A91B /* ShoppingList.swift */; };
 		6B942FB72B7B337B0053A91B /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FB62B7B337B0053A91B /* ShoppingItem.swift */; };
+		6B942FBA2B7B700A0053A91B /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FB92B7B700A0053A91B /* Migrator.swift */; };
+		6B942FBC2B7B71BF0053A91B /* ShoppingListItemsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FBB2B7B71BF0053A91B /* ShoppingListItemsScreen.swift */; };
+		6B942FBE2B7B72A60053A91B /* AddShoppingListItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FBD2B7B72A60053A91B /* AddShoppingListItemScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		6B942FB12B7B2F470053A91B /* AddShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListScreen.swift; sourceTree = "<group>"; };
 		6B942FB42B7B304C0053A91B /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		6B942FB62B7B337B0053A91B /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		6B942FB92B7B700A0053A91B /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
+		6B942FBB2B7B71BF0053A91B /* ShoppingListItemsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemsScreen.swift; sourceTree = "<group>"; };
+		6B942FBD2B7B72A60053A91B /* AddShoppingListItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListItemScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 		6B942F9A2B7B2A170053A91B /* Muumi */ = {
 			isa = PBXGroup;
 			children = (
+				6B942FB82B7B6FF90053A91B /* Utilities */,
 				6B942FB32B7B303C0053A91B /* Models */,
 				6B942FAE2B7B2F1B0053A91B /* Screens */,
 				6B942F9B2B7B2A170053A91B /* MuumiApp.swift */,
@@ -83,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				6B942FB12B7B2F470053A91B /* AddShoppingListScreen.swift */,
+				6B942FBB2B7B71BF0053A91B /* ShoppingListItemsScreen.swift */,
+				6B942FBD2B7B72A60053A91B /* AddShoppingListItemScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -94,6 +103,14 @@
 				6B942FB62B7B337B0053A91B /* ShoppingItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6B942FB82B7B6FF90053A91B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6B942FB92B7B700A0053A91B /* Migrator.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B942F9E2B7B2A170053A91B /* ContentView.swift in Sources */,
+				6B942FBC2B7B71BF0053A91B /* ShoppingListItemsScreen.swift in Sources */,
 				6B942FB52B7B304C0053A91B /* ShoppingList.swift in Sources */,
+				6B942FBA2B7B700A0053A91B /* Migrator.swift in Sources */,
 				6B942F9C2B7B2A170053A91B /* MuumiApp.swift in Sources */,
 				6B942FB72B7B337B0053A91B /* ShoppingItem.swift in Sources */,
+				6B942FBE2B7B72A60053A91B /* AddShoppingListItemScreen.swift in Sources */,
 				6B942FB22B7B2F470053A91B /* AddShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
