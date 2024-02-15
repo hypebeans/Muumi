@@ -15,7 +15,7 @@ class Migrator {
     }
     
     func updateSchema() {
-        let config = Realm.Configuration(schemaVersion: 1) { migration, oldSchemaVersion in
+        let config = Realm.Configuration(schemaVersion: 2) { migration, oldSchemaVersion in
             if oldSchemaVersion < 1 {
                 // Add new fields (大事)
                 migration.enumerateObjects(ofType: ShoppingList.className()) { _, newObject in
