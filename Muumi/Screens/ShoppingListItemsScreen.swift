@@ -26,14 +26,11 @@ struct ShoppingListItemsScreen: View {
     
     var body: some View {
         VStack {
-            
             CategoryFilterView(selectedCategory: $selectedCategory)
                 .padding()
-            
             if shoppingList.items.isEmpty {
                 Text("No items found")
             }
-            
             List {
                 ForEach(items) { item in
                     

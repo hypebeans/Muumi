@@ -33,48 +33,60 @@ struct AddShoppingListItemScreen: View {
         }
     }
     
+    private var isEditing: Bool {
+        itemToEdit == nil ? false : true
+    }
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                LazyVGrid(columns: columns) {
-                    ForEach(data, id: \.self) { item in
-                        Text(item)
-                            .padding()
-                            .frame(width: 110)
-                            .background(selectedCategory == item ? .orange : .green)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-                            .foregroundColor(.white)
-                            .onTapGesture {
-                                selectedCategory = item
-                            }
-                    }
+        
+        VStack(alignment: .leading) {
+            
+            if !isEditing {
+                Text("Add Item")
+                    .font(.largeTitle)
+            }
+            
+            LazyVGrid(columns: columns) {
+                ForEach(data, id: \.self) { item in
+                    Text(item)
+                        .padding()
+                        .frame(width: 110)
+                        .background(selectedCategory == item ? .orange : .green)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+                        .foregroundColor(.white)
+                        .onTapGesture {
+                            selectedCategory = item
+                        }
                 }
-                Spacer().frame(height: 60)
-                TextField("Title", text: $title)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Quantity", text: $quantity)
-                    .textFieldStyle(.roundedBorder)
+            }
+            Spacer().frame(height: 60)
+            TextField("Title", text: $title)
+                .textFieldStyle(.roundedBorder)
+            TextField("Quantity", text: $quantity)
+                .textFieldStyle(.roundedBorder)
+            
+            Button {
+                // アイテム保存または更新
                 
-                Button {
-                    // アイテム保存または更新
-                    
-                    if let _ = itemToEdit { // If itemToEdit has some sort of value
-                        // 更新
-                        updateShoppingItem()
-                    } else {
-                        // 保存
-                        saveShoppingItem()
-                    }
-                    
-                    dismiss()
-                    
-                } label: {
-                    Text("Save")
-                        .frame(maxWidth: .infinity, maxHeight: 40)
-                }.buttonStyle(.bordered)
+                if let _ = itemToEdit { // If itemToEdit has some sort of value
+                    // 更新
+                    updateShoppingItem()
+                } else {
+                    // 保存
+                    saveShoppingItem()
+                }
                 
-            }.padding()
-        }
+                dismiss()
+                
+            } label: {
+                Text(isEditing ? "Update" : "Save")
+                    .frame(maxWidth: .infinity, maxHeight: 40)
+            }.buttonStyle(.bordered)
+                .padding(.top, 20)
+            Spacer()
+                .navigationTitle(isEditing ? "Update Item" : "Add Item")
+        }.padding()
+        
     }
     
     private func saveShoppingItem() {
