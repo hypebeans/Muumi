@@ -12,8 +12,10 @@ struct ContentView: View {
     
     @ObservedResults(ShoppingList.self) var shoppingLists
     @State private var isPresented: Bool = false
+    //    @State private var isLaunched: Bool = true
     
     var body: some View {
+        
         NavigationView {
             VStack {
                 if shoppingLists.isEmpty {
@@ -32,21 +34,30 @@ struct ContentView: View {
                         }
                     }.onDelete(perform: $shoppingLists.remove)
                 }
-                .navigationTitle("Muumi")
             }
             .sheet(isPresented: $isPresented, content: {
                 AddShoppingListScreen()
             })
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("MuumiText")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isPresented = true
                     } label: {
                         Image(systemName: "plus")
+                            .foregroundColor(Color("PrimaryColor"))
                     }
                 }
             }
         }
+        
+        
+        
     }
 }
 

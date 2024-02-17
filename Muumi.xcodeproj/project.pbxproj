@@ -21,6 +21,8 @@
 		6B942FBE2B7B72A60053A91B /* AddShoppingListItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FBD2B7B72A60053A91B /* AddShoppingListItemScreen.swift */; };
 		6B942FC12B7DC8B70053A91B /* ShoppingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FC02B7DC8B70053A91B /* ShoppingItemCell.swift */; };
 		6B942FC32B7DCC3D0053A91B /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FC22B7DCC3D0053A91B /* CategoryFilterView.swift */; };
+		6B94303A2B802FEC0053A91B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430392B802FEC0053A91B /* IntroView.swift */; };
+		6B94303C2B80300E0053A91B /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94303B2B80300E0053A91B /* Introduction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		6B942FBD2B7B72A60053A91B /* AddShoppingListItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListItemScreen.swift; sourceTree = "<group>"; };
 		6B942FC02B7DC8B70053A91B /* ShoppingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCell.swift; sourceTree = "<group>"; };
 		6B942FC22B7DCC3D0053A91B /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
+		6B9430392B802FEC0053A91B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		6B94303B2B80300E0053A91B /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
+		6B94303F2B80D6730053A91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 		6B942F9A2B7B2A170053A91B /* Muumi */ = {
 			isa = PBXGroup;
 			children = (
+				6B94303F2B80D6730053A91B /* Info.plist */,
 				6B942FBF2B7DC8A50053A91B /* Views */,
 				6B942FB82B7B6FF90053A91B /* Utilities */,
 				6B942FB32B7B303C0053A91B /* Models */,
@@ -106,6 +112,7 @@
 			children = (
 				6B942FB42B7B304C0053A91B /* ShoppingList.swift */,
 				6B942FB62B7B337B0053A91B /* ShoppingItem.swift */,
+				6B94303B2B80300E0053A91B /* Introduction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			children = (
 				6B942FC02B7DC8B70053A91B /* ShoppingItemCell.swift */,
 				6B942FC22B7DCC3D0053A91B /* CategoryFilterView.swift */,
+				6B9430392B802FEC0053A91B /* IntroView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,8 +219,10 @@
 				6B942FB52B7B304C0053A91B /* ShoppingList.swift in Sources */,
 				6B942FBA2B7B700A0053A91B /* Migrator.swift in Sources */,
 				6B942F9C2B7B2A170053A91B /* MuumiApp.swift in Sources */,
+				6B94303C2B80300E0053A91B /* Introduction.swift in Sources */,
 				6B942FB72B7B337B0053A91B /* ShoppingItem.swift in Sources */,
 				6B942FBE2B7B72A60053A91B /* AddShoppingListItemScreen.swift in Sources */,
+				6B94303A2B802FEC0053A91B /* IntroView.swift in Sources */,
 				6B942FB22B7B2F470053A91B /* AddShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,9 +360,9 @@
 				DEVELOPMENT_TEAM = 4R2RBN6HY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Muumi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -379,9 +389,9 @@
 				DEVELOPMENT_TEAM = 4R2RBN6HY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Muumi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
