@@ -32,11 +32,12 @@ struct AddShoppingListScreen: View {
                     
                     dismiss()
                 } label: {
-                    Text("Save")
+                    Text("SAVE")
                         .frame(maxWidth: .infinity)
                 }.buttonStyle(.bordered)
             }
             .navigationTitle("New List")
+            .font(.custom(Font.futura, size: 20))
         }
     }
 }

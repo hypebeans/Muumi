@@ -23,6 +23,11 @@
 		6B942FC32B7DCC3D0053A91B /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B942FC22B7DCC3D0053A91B /* CategoryFilterView.swift */; };
 		6B94303A2B802FEC0053A91B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430392B802FEC0053A91B /* IntroView.swift */; };
 		6B94303C2B80300E0053A91B /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B94303B2B80300E0053A91B /* Introduction.swift */; };
+		6B9430412B818BF00053A91B /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430402B818BF00053A91B /* OnboardView.swift */; };
+		6B9430442B82FB7C0053A91B /* ViewPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430432B82FB7C0053A91B /* ViewPath.swift */; };
+		6B9430462B8301140053A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430452B8301140053A91B /* HomeView.swift */; };
+		6B9430762B8469AA0053A91B /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6B9430752B8469AA0053A91B /* Futura.ttc */; };
+		6B9430792B846A360053A91B /* Font+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430782B846A360053A91B /* Font+AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		6B9430392B802FEC0053A91B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		6B94303B2B80300E0053A91B /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
 		6B94303F2B80D6730053A91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6B9430402B818BF00053A91B /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		6B9430432B82FB7C0053A91B /* ViewPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPath.swift; sourceTree = "<group>"; };
+		6B9430452B8301140053A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6B9430752B8469AA0053A91B /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Futura.ttc; path = ../../../../../../../System/Library/Fonts/Supplemental/Futura.ttc; sourceTree = "<group>"; };
+		6B9430782B846A360053A91B /* Font+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppFonts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,9 @@
 		6B942F9A2B7B2A170053A91B /* Muumi */ = {
 			isa = PBXGroup;
 			children = (
+				6B9430772B846A1C0053A91B /* Extensions */,
+				6B9430742B8469950053A91B /* Fonts */,
+				6B9430422B82FB6B0053A91B /* Paths */,
 				6B94303F2B80D6730053A91B /* Info.plist */,
 				6B942FBF2B7DC8A50053A91B /* Views */,
 				6B942FB82B7B6FF90053A91B /* Utilities */,
@@ -131,8 +144,34 @@
 				6B942FC02B7DC8B70053A91B /* ShoppingItemCell.swift */,
 				6B942FC22B7DCC3D0053A91B /* CategoryFilterView.swift */,
 				6B9430392B802FEC0053A91B /* IntroView.swift */,
+				6B9430402B818BF00053A91B /* OnboardView.swift */,
+				6B9430452B8301140053A91B /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6B9430422B82FB6B0053A91B /* Paths */ = {
+			isa = PBXGroup;
+			children = (
+				6B9430432B82FB7C0053A91B /* ViewPath.swift */,
+			);
+			path = Paths;
+			sourceTree = "<group>";
+		};
+		6B9430742B8469950053A91B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B9430752B8469AA0053A91B /* Futura.ttc */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6B9430772B846A1C0053A91B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B9430782B846A360053A91B /* Font+AppFonts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B9430762B8469AA0053A91B /* Futura.ttc in Resources */,
 				6B942FA32B7B2A180053A91B /* Preview Assets.xcassets in Resources */,
 				6B942FA02B7B2A180053A91B /* Assets.xcassets in Resources */,
 			);
@@ -215,15 +255,19 @@
 				6B942FC12B7DC8B70053A91B /* ShoppingItemCell.swift in Sources */,
 				6B942F9E2B7B2A170053A91B /* ContentView.swift in Sources */,
 				6B942FC32B7DCC3D0053A91B /* CategoryFilterView.swift in Sources */,
+				6B9430462B8301140053A91B /* HomeView.swift in Sources */,
 				6B942FBC2B7B71BF0053A91B /* ShoppingListItemsScreen.swift in Sources */,
 				6B942FB52B7B304C0053A91B /* ShoppingList.swift in Sources */,
 				6B942FBA2B7B700A0053A91B /* Migrator.swift in Sources */,
 				6B942F9C2B7B2A170053A91B /* MuumiApp.swift in Sources */,
 				6B94303C2B80300E0053A91B /* Introduction.swift in Sources */,
 				6B942FB72B7B337B0053A91B /* ShoppingItem.swift in Sources */,
+				6B9430412B818BF00053A91B /* OnboardView.swift in Sources */,
+				6B9430792B846A360053A91B /* Font+AppFonts.swift in Sources */,
 				6B942FBE2B7B72A60053A91B /* AddShoppingListItemScreen.swift in Sources */,
 				6B94303A2B802FEC0053A91B /* IntroView.swift in Sources */,
 				6B942FB22B7B2F470053A91B /* AddShoppingListScreen.swift in Sources */,
+				6B9430442B82FB7C0053A91B /* ViewPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

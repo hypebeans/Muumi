@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryFilterView: View {
-    let categories = ["All", "Produce", "Fruit", "Meat", "Condiments", "Beverages", "Snacks", "Dairy"]
+    let categories = ["All", "Produce", "Fruit", "Meat", "Condiments", "Beverages", "Snacks", "Dairy", "Frozen Food"]
     @Binding var selectedCategory: String
     
     var body: some View {
@@ -19,7 +19,7 @@ struct CategoryFilterView: View {
                         .frame(minWidth: 100)
                         .padding(6)
                         .foregroundColor(.white)
-                        .background(selectedCategory == category ? .orange : .green)
+                        .background(selectedCategory == category ? Color("SecondaryColor") : Color("PrimaryColor"))
                         .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
                         .onTapGesture {
                             selectedCategory = category

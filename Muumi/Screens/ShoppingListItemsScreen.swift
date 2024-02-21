@@ -29,33 +29,41 @@ struct ShoppingListItemsScreen: View {
             CategoryFilterView(selectedCategory: $selectedCategory)
                 .padding()
             if shoppingList.items.isEmpty {
-                Text("No items found")
-            }
-            List {
-                ForEach(items) { item in
-                    
-                    NavigationLink {
-                        AddShoppingListItemScreen(shoppingList: shoppingList, itemToEdit: item)
-                    } label: {
-                        ShoppingItemCell(item: item, selected: selectedItemIds.contains(item.id)) { selected in
-                            if selected {
-                                selectedItemIds.append(item.id)
-                                if let indexToDelete = shoppingList.items.firstIndex(where: { $0.id == item.id }) {
-                                    //アイテム削除
-                                    $shoppingList.items.remove(at: indexToDelete)
+                Spacer()
+                Image("No Items Found")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(1.25)
+                    .padding()
+                Spacer()
+            } else {
+                List {
+                    ForEach(items) { item in
+                        
+                        NavigationLink {
+                            AddShoppingListItemScreen(shoppingList: shoppingList, itemToEdit: item)
+                        } label: {
+                            ShoppingItemCell(item: item, selected: selectedItemIds.contains(item.id)) { selected in
+                                if selected {
+                                    selectedItemIds.append(item.id)
+                                    if let indexToDelete = shoppingList.items.firstIndex(where: { $0.id == item.id }) {
+                                        //アイテム削除
+                                        $shoppingList.items.remove(at: indexToDelete)
+                                    }
                                 }
                             }
                         }
-                    }
-                }.onDelete(perform: $shoppingList.items.remove)
+                    }.onDelete(perform: $shoppingList.items.remove)
+                }
+                .navigationTitle(shoppingList.title)
             }
-            .navigationTitle(shoppingList.title)
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     isPresented = true
                 } label: {
                     Image(systemName: "plus")
+                        .foregroundStyle(Color("PrimaryColor"))
                 }
             }
         }.sheet(isPresented: $isPresented) {

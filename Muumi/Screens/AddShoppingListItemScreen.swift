@@ -19,8 +19,8 @@ struct AddShoppingListItemScreen: View {
     @State private var quantity: String = ""
     @State private var selectedCategory = ""
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    let data = ["Produce", "Fruit", "Meat", "Condiments", "Beverages", "Snacks", "Dairy"]
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    let data = ["Produce", "Fruit", "Meat", "Condiments", "Beverages", "Snacks", "Dairy", "Frozen Food"]
     
     init(shoppingList: ShoppingList, itemToEdit: ShoppingItem? = nil) {
         self.shoppingList = shoppingList
@@ -43,15 +43,16 @@ struct AddShoppingListItemScreen: View {
             
             if !isEditing {
                 Text("Add Item")
-                    .font(.largeTitle)
+                    .font(.custom(Font.futura, size: 32))
             }
             
             LazyVGrid(columns: columns) {
                 ForEach(data, id: \.self) { item in
                     Text(item)
+                        .font(.custom(Font.futura, size: 16))
                         .padding()
-                        .frame(width: 110)
-                        .background(selectedCategory == item ? .orange : .green)
+                        .frame(width: 150)
+                        .background(selectedCategory == item ? Color("SecondaryColor") : Color("PrimaryColor"))
                         .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
                         .foregroundColor(.white)
                         .onTapGesture {
@@ -62,8 +63,10 @@ struct AddShoppingListItemScreen: View {
             Spacer().frame(height: 60)
             TextField("Title", text: $title)
                 .textFieldStyle(.roundedBorder)
+                .font(.custom(Font.futura, size: 20))
             TextField("Quantity", text: $quantity)
                 .textFieldStyle(.roundedBorder)
+                .font(.custom(Font.futura, size: 20))
             
             Button {
                 // アイテム保存または更新
@@ -80,6 +83,7 @@ struct AddShoppingListItemScreen: View {
                 
             } label: {
                 Text(isEditing ? "Update" : "Save")
+                    .font(.custom(Font.futura, size: 20))
                     .frame(maxWidth: .infinity, maxHeight: 40)
             }.buttonStyle(.bordered)
                 .padding(.top, 20)

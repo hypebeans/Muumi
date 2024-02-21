@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct IntroView: View {
+    var intro: Introduction
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 30) {
+            Image("\(intro.imageUrl)")
+                .resizable()
+                .scaledToFit()
+                .padding()
+            
+            Text(intro.name)
+                .font(.custom(Font.futura, size: 28))
+                .fontWeight(.bold)
+                .padding()
+            
+            Text(intro.description)
+                .font(.custom(Font.futura, size: 16))
+                .frame(width: 300)
+                .padding()
+            
+        }
     }
 }
 
 #Preview {
-    IntroView()
+    IntroView(intro: Introduction.sampleIntro)
 }
