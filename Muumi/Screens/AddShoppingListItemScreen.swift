@@ -42,8 +42,17 @@ struct AddShoppingListItemScreen: View {
         VStack(alignment: .leading) {
             
             if !isEditing {
-                Text("Add Item")
-                    .font(.custom(Font.futura, size: 32))
+                Image("Add Item")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 225)
+                    .padding(.bottom, 20)
+            } else {
+                Image("Update Item")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 225)
+                    .padding(.bottom, 20)
             }
             
             LazyVGrid(columns: columns) {
@@ -82,13 +91,20 @@ struct AddShoppingListItemScreen: View {
                 dismiss()
                 
             } label: {
-                Text(isEditing ? "Update" : "Save")
-                    .font(.custom(Font.futura, size: 20))
+                Text(isEditing ? "UPDATE" : "SAVE")
+                    .font(.custom("Futura", size: 20))
+                    .fontWeight(.bold)
                     .frame(maxWidth: .infinity, maxHeight: 40)
-            }.buttonStyle(.bordered)
+            }.foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("PrimaryColor"))
+                )
                 .padding(.top, 20)
             Spacer()
-                .navigationTitle(isEditing ? "Update Item" : "Add Item")
+//                .navigationTitle(isEditing ? "Update Item" : "Add Item")
         }.padding()
         
     }

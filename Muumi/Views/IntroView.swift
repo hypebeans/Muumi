@@ -24,7 +24,7 @@ struct IntroView: View {
             
             Text(intro.description)
                 .font(.custom(Font.futura, size: 16))
-                .frame(width: 300)
+                .frame(width: 400)
                 .padding()
             
         }

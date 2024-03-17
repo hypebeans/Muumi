@@ -22,11 +22,14 @@ struct ShoppingItemCell: View {
             
             VStack(alignment: .leading) {
                 Text(item.title)
+                    .font(.custom(Font.futura, size: 24))
                 Text(item.category)
+                    .font(.custom(Font.futura, size: 16))
                     .opacity(0.4)
             }
             Spacer()
             Text("\(item.quantity)")
+                .font(.custom(Font.futura, size: 16))
         }.opacity(selected ? 0.4 : 1.0)
     }
 }

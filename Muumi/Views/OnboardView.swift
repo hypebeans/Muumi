@@ -74,6 +74,8 @@ struct OnboardView: View {
         .fullScreenCover(isPresented: $isDone, content: {
             HomeView()
         })
+        .ignoresSafeArea()
+        
     }
     private func nextIntro() {
         index += 1

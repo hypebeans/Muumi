@@ -28,6 +28,7 @@
 		6B9430462B8301140053A91B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430452B8301140053A91B /* HomeView.swift */; };
 		6B9430762B8469AA0053A91B /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6B9430752B8469AA0053A91B /* Futura.ttc */; };
 		6B9430792B846A360053A91B /* Font+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9430782B846A360053A91B /* Font+AppFonts.swift */; };
+		6BEFD67D2BA5B3BA00A04039 /* EmptyErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEFD67C2BA5B3BA00A04039 /* EmptyErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		6B9430452B8301140053A91B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6B9430752B8469AA0053A91B /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Futura.ttc; path = ../../../../../../../System/Library/Fonts/Supplemental/Futura.ttc; sourceTree = "<group>"; };
 		6B9430782B846A360053A91B /* Font+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppFonts.swift"; sourceTree = "<group>"; };
+		6BEFD67C2BA5B3BA00A04039 /* EmptyErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyErrorAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				6B9430742B8469950053A91B /* Fonts */,
 				6B9430422B82FB6B0053A91B /* Paths */,
 				6B94303F2B80D6730053A91B /* Info.plist */,
+				6BEFD67B2BA5B3A200A04039 /* Alerts */,
 				6B942FBF2B7DC8A50053A91B /* Views */,
 				6B942FB82B7B6FF90053A91B /* Utilities */,
 				6B942FB32B7B303C0053A91B /* Models */,
@@ -172,6 +175,14 @@
 				6B9430782B846A360053A91B /* Font+AppFonts.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BEFD67B2BA5B3A200A04039 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				6BEFD67C2BA5B3BA00A04039 /* EmptyErrorAlert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				6B9430462B8301140053A91B /* HomeView.swift in Sources */,
 				6B942FBC2B7B71BF0053A91B /* ShoppingListItemsScreen.swift in Sources */,
 				6B942FB52B7B304C0053A91B /* ShoppingList.swift in Sources */,
+				6BEFD67D2BA5B3BA00A04039 /* EmptyErrorAlert.swift in Sources */,
 				6B942FBA2B7B700A0053A91B /* Migrator.swift in Sources */,
 				6B942F9C2B7B2A170053A91B /* MuumiApp.swift in Sources */,
 				6B94303C2B80300E0053A91B /* Introduction.swift in Sources */,

@@ -35,12 +35,14 @@ struct HomeView: View {
                                         .opacity(0.4)
                                 }
                             }
+                            //TODO: カスタム
+                            
                         }.onDelete(perform: $shoppingLists.remove)
                     }
                 }
             }
             .sheet(isPresented: $isPresented, content: {
-                AddShoppingListScreen()
+                AddShoppingListScreen(path: .constant([]))
             })
             .toolbar {
                 ToolbarItem(placement: .principal) {

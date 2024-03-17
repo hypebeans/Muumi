@@ -16,6 +16,7 @@ struct CategoryFilterView: View {
             HStack {
                 ForEach(categories, id: \.self) { category in
                     Text(category)
+                        .font(.custom("Futura", size: 18))
                         .frame(minWidth: 100)
                         .padding(6)
                         .foregroundColor(.white)

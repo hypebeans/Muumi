@@ -9,5 +9,5 @@ import Foundation
 
 
 enum ViewPath {
-    case CategoryFilterView, ShoppingItemCell
+    case AddShoppingListScreen, AddShoppingListItemScreen
 }
