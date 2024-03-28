@@ -15,6 +15,9 @@ struct AddShoppingListItemScreen: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @State private var showAlert = false
+    @State private var isErrorShow = false
+    @State private var alertMessage = ""
     @State private var title: String = ""
     @State private var quantity: String = ""
     @State private var selectedCategory = ""
@@ -104,9 +107,19 @@ struct AddShoppingListItemScreen: View {
                 )
                 .padding(.top, 20)
             Spacer()
-//                .navigationTitle(isEditing ? "Update Item" : "Add Item")
-        }.padding()
-        
+            //                .navigationTitle(isEditing ? "Update Item" : "Add Item")
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                                Button(action: {
+            dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+            .foregroundColor(Color("PrimaryColor"))
+        })
     }
     
     private func saveShoppingItem() {

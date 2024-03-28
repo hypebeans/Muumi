@@ -11,6 +11,7 @@ import RealmSwift
 struct HomeView: View {
     @ObservedResults(ShoppingList.self) var shoppingLists
     @State private var isPresented: Bool = false
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationView {
@@ -41,9 +42,15 @@ struct HomeView: View {
                     }
                 }
             }
-            .sheet(isPresented: $isPresented, content: {
-                AddShoppingListScreen(path: .constant([]))
-            })
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarTitle("", displayMode: .inline)
+//            .navigationBarItems(leading:
+//                                    Button(action: {
+//                dismiss()
+//            }) {
+//                Image(systemName: "chevron.left")
+//                    .foregroundColor(Color("PrimaryColor"))
+//            })
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Image("MuumiText")
@@ -59,7 +66,10 @@ struct HomeView: View {
                             .foregroundColor(Color("PrimaryColor"))
                     }
                 }
-            }
+            }.sheet(isPresented: $isPresented, content: {
+                AddShoppingListScreen(path: .constant([]))
+            })
+            
         }
     }
 }

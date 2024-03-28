@@ -43,18 +43,7 @@ struct ShoppingListItemsScreen: View {
                     ForEach(items) { item in
                         NavigationLink {
                             AddShoppingListItemScreen(shoppingList: shoppingList, itemToEdit: item)
-                                .navigationBarBackButtonHidden(true)
-                                .navigationBarItems(leading:
-                                Button(action: {
-                                    dismiss()
-                                }) {
-                                    HStack {
-                                        Image(systemName: "chevron.left")
-                                        Text("Back")
-                                    }
-                                    .foregroundColor(Color("PrimaryColor"))
-                                }
-                                )
+                            
                         } label: {
                             ShoppingItemCell(item: item, selected: selectedItemIds.contains(item.id)) { selected in
                                 if selected {
@@ -71,21 +60,12 @@ struct ShoppingListItemsScreen: View {
                 .navigationBarBackButtonHidden(true)
                 .navigationBarTitle("", displayMode: .inline)
                 .navigationBarItems(leading:
-                                        Button(action: {
+                   Button(action: {
                     dismiss()
                 }) {
                     Image(systemName: "chevron.left")
-                        .foregroundColor(Color("PrimaryColor"))
-                }
-//                                    ,
-//                                    trailing:
-//                                        Button {
-//                    isPresented = true
-//                } label: {
-//                    Image(systemName: "plus")
-//                        .foregroundStyle(Color("PrimaryColor"))
-//                }
-                )
+                        .foregroundStyle(Color("PrimaryColor"))
+                })
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text(shoppingList.title)
@@ -103,7 +83,19 @@ struct ShoppingListItemsScreen: View {
                     AddShoppingListItemScreen(shoppingList: shoppingList)
                 }
             }
-        }.toolbar {
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+                                Button(action: {
+            dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+            .foregroundColor(Color("PrimaryColor"))
+        })
+        .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     isPresented = true

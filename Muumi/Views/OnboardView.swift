@@ -12,6 +12,7 @@ struct OnboardView: View {
     @State private var index = 0
     @State private var selectedIndex = 0
     @State private var isDone = false
+    @Binding var isFirstLaunch: Bool
     private let intros: [Introduction] = Introduction.onboards
     private let dot = UIPageControl.appearance()
     
@@ -86,11 +87,13 @@ struct OnboardView: View {
     }
     
     private func skipIntro() {
+        isFirstLaunch = true //初期化のラウンチ
+//        UserDefaults.standard.set(true, forKey: "hasLaunched")
         isDone = true
     }
     
 }
 
 #Preview {
-    OnboardView()
+    OnboardView(isFirstLaunch: .constant(false))
 }
